@@ -27,6 +27,11 @@ def hello():
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
 
+@app.route('/hh')
+def helloMe():
+   print('Request for helloMe page received')
+   # return in json response that hello from me
+   return {'hello': 'from me'}
 
 if __name__ == '__main__':
    app.run()
